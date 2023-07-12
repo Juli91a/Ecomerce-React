@@ -1,23 +1,22 @@
-import { useState } from "react";
-import Footer from "./components/layout/Footer";
-import NavBar from "./components/layout/NavBar";
-import ItemList from "./components/pages/ItemList/ItemList";
+import ItemListContainer from "./components/pages/itemList/ItemListContainer";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./components/layout/Layout";
+import { DetalleProductoContainer } from "./components/pages/DetalleProducto/DetalleProductoContainer";
 
 function App() {
-  const [saludar, setSaludar] = useState("Bienvenido ");
-  const cambiarSaludar = (nombre) => {
-    setSaludar(nombre);
-  };
   return (
-    <div>
-      <NavBar />
-      <ItemList
-        cambiarSaludar={cambiarSaludar}
-        saludar={saludar}
-        usuario="Julian "
-      />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<Layout />}>
+          <Route path="/" element={<ItemListContainer />} />
+          <Route path="/category/:categorias" element={<ItemListContainer />} />
+          <Route
+            path="/detalleProducto/:id"
+            element={<DetalleProductoContainer />}
+          />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 export default App;

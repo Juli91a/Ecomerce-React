@@ -1,0 +1,13 @@
+.contenedor {
+    width: 25%;
+    background-Color: #D4B16A;
+    border: 1px black solid;
+    border-radius: 5px;
+    padding: 5px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+.contenedor img {
+    max-width: 75%;
+}

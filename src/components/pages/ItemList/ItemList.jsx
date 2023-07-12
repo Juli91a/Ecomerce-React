@@ -1,13 +1,17 @@
-const ItemList = ({ cambiarSaludar, saludar, usuario }) => {
+import TarjetaProducto from "../../common/tarjetaProducto/TarjetaProducto";
+
+const ItemList = ({ products }) => {
   return (
-    <div style={{ backgroundColor: "#FCDFA5" }}>
-      <container>
-        <h1>
-          {usuario}
-          {saludar}
-        </h1>
-        <button onClick={() => cambiarSaludar("A nombre marca ")}>Marca</button>
-      </container>
+    <div
+      style={{
+        display: "flex",
+        flexWrap: "wrap",
+        justifyContent: "space-around",
+      }}
+    >
+      {products.map((elemento) => {
+        return <TarjetaProducto key={elemento.id} elemento={elemento} />;
+      })}
     </div>
   );
 };

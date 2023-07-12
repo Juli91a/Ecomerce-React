@@ -1,0 +1,14 @@
+.contenedorNav {
+    display: flex;
+    background-color: #D4B16A;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 20px;
+}
+
+.links a {
+    padding: 0 20px;
+    text-decoration: none;
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
