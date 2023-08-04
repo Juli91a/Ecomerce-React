@@ -1,9 +1,10 @@
 import { BsFillCartCheckFill } from "react-icons/bs";
 import { Badge } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const Carrito = () => {
   return (
-    <div style={{ paddingTop: "10px" }}>
+    <Link to="/ItemsCarrito" style={{ paddingTop: "10px" }}>
       <Badge
         badgeContent={4}
         color="primary"
@@ -14,7 +15,7 @@ const Carrito = () => {
       >
         <BsFillCartCheckFill color="#3C3175" size="30px" />
       </Badge>
-    </div>
+    </Link>
   );
 };
 

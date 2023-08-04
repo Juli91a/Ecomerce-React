@@ -5,7 +5,7 @@ export let productos = [
     price: 20000,
     stock: 4,
     description: "Buzo DC canguro",
-    category: "Buzos",
+    categoria: "Buzos",
     img: "https://res.cloudinary.com/dkkqrsod5/image/upload/v1689130840/buzo_dc-removebg-preview_if1tgi.png",
   },
   {
@@ -14,7 +14,7 @@ export let productos = [
     price: 9500,
     stock: 5,
     description: "Remera clásica de VOLCOM",
-    category: "Remeras",
+    categoria: "Remeras",
     img: "https://res.cloudinary.com/dkkqrsod5/image/upload/v1689130840/remera_volcom-removebg-preview_xwyomu.png",
   },
   {
@@ -23,7 +23,7 @@ export let productos = [
     price: 5500,
     stock: 0,
     description: "Short de basket de Chicago Bulls",
-    category: "Pantalones",
+    categoria: "Pantalones",
     img: "https://res.cloudinary.com/dkkqrsod5/image/upload/v1689130840/Short_Chicago-removebg-preview_fo9dz4.png",
   },
   {
@@ -32,7 +32,7 @@ export let productos = [
     price: 17800,
     stock: 5,
     description: "Buzo Volcom",
-    category: "Buzos",
+    categoria: "Buzos",
     img: "https://res.cloudinary.com/dkkqrsod5/image/upload/v1689130840/buzo_volcom-removebg-preview_iljdjd.png",
   },
 ];

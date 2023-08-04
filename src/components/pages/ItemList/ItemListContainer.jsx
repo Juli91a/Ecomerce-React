@@ -11,13 +11,13 @@ const ItemListContainer = () => {
 
   useEffect(() => {
     let prodFiltrados = productos.filter(
-      (elemento) => elemento.category === categorias
+      (elemento) => elemento.categoria === categorias
     );
-    const tarea = new Promise((resolve) => {
+    const producto = new Promise((resolve) => {
       resolve(categorias === undefined ? productos : prodFiltrados);
     });
 
-    tarea
+    producto
       .then((respuesta) => setProducts(respuesta))
       .catch((error) => setError(error));
   }, [categorias]);
