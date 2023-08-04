@@ -1,12 +1,16 @@
 import { BsFillCartCheckFill } from "react-icons/bs";
 import { Badge } from "@mui/material";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { CarritoContext } from "../../context/CarritoContext";
 
 const Carrito = () => {
+  let { produTotal } = useContext(CarritoContext);
+  let total = produTotal();
   return (
     <Link to="/ItemsCarrito" style={{ paddingTop: "10px" }}>
       <Badge
-        badgeContent={4}
+        badgeContent={total}
         color="primary"
         anchorOrigin={{
           vertical: "bottom",

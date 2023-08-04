@@ -1,8 +1,8 @@
 import { useState } from "react";
 import Contador from "./Contador";
 
-const ContadorContainer = ({ stock, onAdd }) => {
-  const [contador, setContador] = useState(1);
+const ContadorContainer = ({ stock, onAdd, inicial = 1 }) => {
+  const [contador, setContador] = useState(inicial);
 
   const sumar = () => {
     contador < stock ? setContador(contador + 1) : alert("No hay más stock");

@@ -5,7 +5,6 @@ import { useParams } from "react-router-dom";
 
 const ItemListContainer = () => {
   const [products, setProducts] = useState([]);
-  const [error, setError] = useState({});
 
   const { categorias } = useParams();
 
@@ -17,11 +16,8 @@ const ItemListContainer = () => {
       resolve(categorias === undefined ? productos : prodFiltrados);
     });
 
-    producto
-      .then((respuesta) => setProducts(respuesta))
-      .catch((error) => setError(error));
+    producto.then((respuesta) => setProducts(respuesta));
   }, [categorias]);
-  console.log(error);
   return <ItemList products={products} />;
 };
 
