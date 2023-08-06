@@ -11,6 +11,7 @@ const Carrito = () => {
     <Link to="/ItemsCarrito" style={{ paddingTop: "10px" }}>
       <Badge
         badgeContent={total}
+        showZero
         color="primary"
         anchorOrigin={{
           vertical: "bottom",

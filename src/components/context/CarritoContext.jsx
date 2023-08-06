@@ -53,7 +53,7 @@ const CarritoProvider = ({ children }) => {
   };
 
   const elementoCarrito = (id) => {
-    const productoCarrito = carrito.find((elemento) => elemento.id === +id);
+    const productoCarrito = carrito.find((elemento) => elemento.id === id);
     return productoCarrito?.cantidad;
   };
 
